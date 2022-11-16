@@ -53,7 +53,11 @@ L.VectorGrid.Slicer = L.VectorGrid.extend({
 		vectorTileLayerName: 'sliced',
 
 		extent: 4096,	// Default for geojson-vt
-		maxZoom: 14  	// Default for geojson-vt
+		maxZoom: 14, 	// Default for geojson-vt
+
+		// GridLayer option
+		// Map will wrap regardless, yet keeping this as true prevents bugs when modifying feature styles.
+		noWrap: true 
 	},
 
 	initialize: function(geojson, options) {
